@@ -1,0 +1,63 @@
+$TTL 43200	; 12 hours
+$TTL 3600 ; 1 hour
+$TTL 60 ; 1 minute
+@		IN SOA	ns1.plug.org.au. hostmaster.plug.org.au. (
+				2016021601 ; serial
+				4800       ; refresh (1 hour 20 minutes)
+				900        ; retry (15 minutes)
+				2419200    ; expire (4 weeks)
+				3600       ; minimum (1 hour)
+				)
+			NS	ns1.plug.org.au.
+			NS	ns2.purewhite.id.au.
+			NS	ns3.purewhite.id.au.
+			A	54.252.97.56	
+			MX	5 power.plug.org.au.
+rt			MX	5 power.plug.org.au.
+rt			A	54.252.97.56	
+mail1			A	175.41.45.17
+;mail2			A	203.82.208.245
+;mail3			A	203.82.208.249
+; ns1 = Power
+ns1			A	54.252.97.56
+;; ns2 = Shameless
+;ns2			A	203.82.208.245
+;			AAAA	2402:8000:3:a2::1
+;; ns4 = Bath (ex-spark)
+;ns4			A	203.82.208.249
+;			AAAA    2402:8000:3:a3::1
+
+
+pot			A	175.41.45.17
+shameless		A	203.82.208.245
+			AAAA	2402:8000:3:a2::1
+			TXT	"PC with a blue strip light"
+			LOC	31 51 37 S 115 53 34 E 20m
+bath			A	203.82.208.249
+			AAAA    2402:8000:3:a3::1
+			TXT	"Acer Altos"
+			LOC	31 51 37 S 115 53 34 E 21m
+power			A	54.252.97.56 
+			TXT	"Amazon EC2 in Sydney"
+			LOC	33 55 50 S 151 11 49 E 20m
+; Services
+lists			CNAME   power	
+www			CNAME	power
+irc			CNAME	irc.uniirc.com.
+mumble			CNAME	power
+icecast			CNAME	power
+secure			CNAME	power
+shell			CNAME	shameless
+ftp			CNAME	shameless
+rsync			CNAME	shameless
+lca2014			CNAME	userconf.osmahi.com.
+
+; members subdomain
+; Can't use cname for members as MX is defined
+members			A	203.82.208.245
+			AAAA    2402:8000:3:a2::1
+members		IN	MX	10 mail.members
+
+mail.members		A       203.82.208.249
+                        AAAA    2402:8000:3:a3::1
+
