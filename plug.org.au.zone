@@ -15,9 +15,6 @@ $TTL 60 ; 1 minute
 			MX	5 power.plug.org.au.
 rt			MX	5 power.plug.org.au.
 rt			A	54.252.97.56	
-mail1			A	175.41.45.17
-;mail2			A	203.82.208.245
-;mail3			A	203.82.208.249
 ; ns1 = Power
 ns1			A	54.252.97.56
 ;; ns2 = Shameless
@@ -28,7 +25,6 @@ ns1			A	54.252.97.56
 ;			AAAA    2402:8000:3:a3::1
 
 
-pot			A	175.41.45.17
 shameless		A	203.82.208.245
 			AAAA	2402:8000:3:a2::1
 			TXT	"PC with a blue strip light"
