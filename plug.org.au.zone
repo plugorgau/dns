@@ -29,12 +29,3 @@ icecast			CNAME	power
 secure			CNAME	power
 lca2014			CNAME	userconf.osmahi.com.
 
-; members subdomain
-; Can't use cname for members as MX is defined
-members			A	203.82.208.245
-			AAAA    2402:8000:3:a2::1
-members		IN	MX	10 mail.members
-
-mail.members		A       203.82.208.249
-                        AAAA    2402:8000:3:a3::1
-
