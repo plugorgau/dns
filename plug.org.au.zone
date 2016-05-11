@@ -2,15 +2,15 @@ $TTL 43200	; 12 hours
 $TTL 3600 ; 1 hour
 $TTL 60 ; 1 minute
 @		IN SOA	ns1.plug.org.au. hostmaster.plug.org.au. (
-				2016021601 ; serial
+				2016051101 ; serial
 				4800       ; refresh (1 hour 20 minutes)
 				900        ; retry (15 minutes)
 				2419200    ; expire (4 weeks)
 				3600       ; minimum (1 hour)
 				)
 			NS	ns1.plug.org.au.
-			NS	ns2.purewhite.id.au.
-			NS	ns3.purewhite.id.au.
+			NS	ns2.whiteitsolutions.com.au.
+			NS	ns3.whiteitsolutions.com.au.
 			A	54.252.97.56	
 			MX	5 power.plug.org.au.
 rt			MX	5 power.plug.org.au.
