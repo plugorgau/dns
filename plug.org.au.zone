@@ -9,8 +9,8 @@ $TTL 60 ; 1 minute
 				3600       ; minimum (1 hour)
 				)
 			NS	ns1.plug.org.au.
-			NS	ns2.whiteitsolutions.com.au.
-			NS	ns3.whiteitsolutions.com.au.
+			NS	ns1.whiteitsolutions.com.au.
+			NS	ns4.whiteitsolutions.com.au.	
 			A	54.252.97.56	
 			MX	5 power.plug.org.au.
 rt			MX	5 power.plug.org.au.
